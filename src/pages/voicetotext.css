@@ -1,0 +1,26 @@
+.mainbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.mainbox{
+    background-color: #D6E5FA;
+    width: 100vw;
+    height: 100vh;
+}
+.textarea{
+   margin-bottom: 40px; 
+}
+.startbutton{
+    margin-right: 50px;
+}
+.stopbutton{
+    margin-left: 50px;
+}
