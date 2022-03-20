@@ -39,8 +39,13 @@
   background-color: white;
   width: 70vw;
   height: 70vh;
+  border-radius: 19px;
+  box-shadow: 10;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
 }
 .downloadbutton{
   margin-top: 10px;
   margin-left: 40px;
+ 
 }
