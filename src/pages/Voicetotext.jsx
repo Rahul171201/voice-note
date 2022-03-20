@@ -13,14 +13,34 @@ function VoiceToText() {
   const microphoneRef = useRef(null);
   const [textSpeech, setTextSpeech] = useState("rahul");
 
-  let data = "";
+  // saving the text from the div
+  function saveFile() {
+      // Convert the text to BLOB.
+    const textToBLOB = new Blob([textSpeech], { type: 'text/plain' });
+    const sFileName = 'formData.txt';	   // The file to save the data.
+    let newLink = document.createElement("a");
+    newLink.download = sFileName;
+    if (window.webkitURL != null) {
+      newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+    }
+    else {
+      newLink.href = window.URL.createObjectURL(textToBLOB);
+      newLink.style.display = "none";
+      document.body.appendChild(newLink);
+    }
+    newLink.click();
+    window.location.reload();
+  }
 
-   // saving the text from the div
-   useEffect(() => {
-     if(transcript){
-      setTextSpeech(document.getElementsByClassName('resulttext').value);
-     }
+  useEffect(() => {
+    if (transcript) {
+      setTextSpeech(document.getElementById('resulttext').innerHTML);
+    }
   }, [transcript]);
+
+
+
+
 
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
     return (
@@ -48,10 +68,14 @@ function VoiceToText() {
     stopHandle();
     resetTranscript();
   };
-  console.log(textSpeech);
-  
 
-  
+
+  //   if(document.getElementById("resulttext") != null){
+  //     console.log(textSpeech);
+  // }
+
+
+
   return (
     <div className='mainbox'>
       <h1 className="headername">Voice to Text Converter</h1>
@@ -59,10 +83,11 @@ function VoiceToText() {
         {isListening ? "Listening........." : "Click to start Listening"}
       </div>
       <Button variant="primary" className="resetbutton" onClick={handleReset}>RESET</Button>
-      <div className="resulttext">{transcript}</div>
+      <div id="resulttext">{transcript}</div>
       <div className='buttons'>
         <Button variant="success" className='startbutton' ref={microphoneRef} onClick={handleListing}>START</Button>
         <Button variant="danger" className='stopbutton' onClick={stopHandle}>STOP</Button>
+        <Button variant="primary" className='downloadbutton' onClick={saveFile}>DOWNLOAD</Button>
       </div>
     </div>
   );

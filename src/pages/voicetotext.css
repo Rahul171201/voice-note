@@ -35,8 +35,12 @@
 .microphone-status{
   font-family: 'Montserrat', sans-serif;
 }
-.resulttext{
+#resulttext{
   background-color: white;
   width: 70vw;
   height: 70vh;
+}
+.downloadbutton{
+  margin-top: 10px;
+  margin-left: 40px;
 }
