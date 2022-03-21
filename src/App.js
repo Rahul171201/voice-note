@@ -1,10 +1,11 @@
 import './App.css';
-import VoiceToText from './pages/Voicetotext';
+import VoiceToText from './pages/voicetotext/Voicetotext';
+import Home from './pages/home/Home';
 
 function App() {
   return (
     <div className="App">
-      <VoiceToText></VoiceToText>
+      <Home></Home>
     </div>
   );
 }

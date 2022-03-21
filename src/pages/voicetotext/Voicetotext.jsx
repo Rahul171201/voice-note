@@ -7,13 +7,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Button from "react-bootstrap/Button";
 
 function VoiceToText() {
-
   const { transcript, resetTranscript } = useSpeechRecognition();
   const [isListening, setIsListening] = useState(false);
   const microphoneRef = useRef(null);
   const [textSpeech, setTextSpeech] = useState("rahul");
 
-  // saving the text from the div
+  // saving the result data into a text file
   function saveFile() {
       // Convert the text to BLOB.
     const textToBLOB = new Blob([textSpeech], { type: 'text/plain' });
@@ -41,7 +40,7 @@ function VoiceToText() {
 
 
 
-
+  // speech recognition
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
     return (
       <div className="mircophone-container">
