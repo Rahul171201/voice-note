@@ -1,0 +1,6 @@
+.optionbox{
+    display: flex;
+    width: 100vw;
+    height: 85vh;
+    background-color: blue;
+}
