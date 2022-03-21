@@ -1,0 +1,10 @@
+.card{
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardimage{
+    width: 220px;
+    height: 200px;
+}
