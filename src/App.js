@@ -1,7 +1,6 @@
 import VoiceToText from './pages/voicetotext/Voicetotext';
 import Home from './pages/home/Home';
-import Navbar from './components/Navbar/Navbar';
-import Option from './components/Option/Option';
+import About from './pages/about/About';
 
 import {
   BrowserRouter,
@@ -17,6 +16,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/voicetotext" exact={true} component={VoiceToText} />
+          <Route path="/about" exact={true} component={About} />
         </Switch>
       </BrowserRouter>
     </div>

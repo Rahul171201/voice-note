@@ -1,8 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
 import "./voicetotext.css";
-import microPhoneIcon from "./microphone.png";
-import { TextareaAutosize } from '@mui/base';
 import 'bootstrap/dist/css/bootstrap.css';
 import Button from "react-bootstrap/Button";
 import Navbar from "../../components/Navbar/Navbar";

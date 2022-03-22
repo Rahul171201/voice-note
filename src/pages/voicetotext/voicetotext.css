@@ -54,9 +54,17 @@
   padding: 10px;
   font-family: "Montserrat", sans-serif;
   font-family: "Ubuntu Mono", monospace;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .downloadbutton{
   margin-top: 10px;
   margin-left: 40px;
  
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
 }
