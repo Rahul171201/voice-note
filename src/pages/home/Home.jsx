@@ -1,7 +1,6 @@
-import React from 'react';
-import './home.css';
 import Navbar from '../../components/Navbar/Navbar';
 import Option from '../../components/Option/Option';
+import './home.css';
 
 export default function Home() {
     return (
