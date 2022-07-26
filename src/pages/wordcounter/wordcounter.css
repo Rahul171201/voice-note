@@ -21,9 +21,10 @@
     align-items: center;
     padding-left: 3vw;
 }
-.wordButton{
-    width: 100px;
-    height: 40px;
-    margin-top: 3vh;
+
+.count{
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 2vh;
     margin-right: 2vw;
 }

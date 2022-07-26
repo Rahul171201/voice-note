@@ -33,11 +33,6 @@ export default function WordCounter() {
         }
     }
 
-    const countWords = () => {
-        const ans = finalWords.length;
-        console.log(ans);
-    }
-
     return (
         <div className='wordcounterbox'>
             <Navbar></Navbar>
@@ -47,7 +42,8 @@ export default function WordCounter() {
                 </div>
                 <div className='rightBox'>
                     <input type="file" name="wordFile" onChange={uploadFile} ></input>
-                    <button className='wordButton' onClick={countWords}>Count</button>
+                  
+                    <p className='count'>The Total Number Of Words Are : {finalWords.length}</p>
                 </div>
             </div>
         </div>
