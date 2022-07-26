@@ -8,14 +8,14 @@ export default function CardComponent(props) {
   const history = useHistory();
 
   const routeChange = () => {
-    let path = `/voicetotext`;
+    let path = props.cardURL;
     history.push(path);
   }
 
   return (
     <div>
       <Card style={{ width: '38rem' }} className="card">
-        <Card.Img variant="top" src="./assets/voicetotext.png" className='cardimage' />
+        <Card.Img variant="top" src={props.cardImage} className='cardimage' />
         <Card.Body>
           <Card.Title>{props.cardTitle}</Card.Title>
           <Card.Text>

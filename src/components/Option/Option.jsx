@@ -13,16 +13,16 @@ export default function Option() {
         <div className="optionbox">
             <div className='wrapper'>
                 <CardGroup>
-                    <CardComponent cardTitle="Voice To Text Converter" cardText={card1Text}>
+                    <CardComponent cardTitle="Voice To Text Converter" cardText={card1Text} cardImage="./assets/voicetotext.png" cardURL="/voicetotext">
                     </CardComponent>
 
-                    <CardComponent cardTitle="Text To Voice Converter" cardText={card2Text}>
+                    <CardComponent cardTitle="Text To Voice Converter" cardText={card2Text} cardImage="./assets/texttovoice.png" cardURL="/texttovoice">
                     </CardComponent>
 
-                    <CardComponent cardTitle="Word Counter" cardText={card3Text}>
+                    <CardComponent cardTitle="Word Counter" cardText={card3Text} cardImage="./assets/wordcounter.png" cardURL="/wordcounter">
                     </CardComponent>
 
-                    <CardComponent cardTitle="Speaking Hemon" cardText={card4Text}>
+                    <CardComponent cardTitle="Speaking Hemon" cardText={card4Text} cardImage="./assets/game.jpg" cardURL="/hemongame">
                     </CardComponent>
                    
 

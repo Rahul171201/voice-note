@@ -1,0 +1,29 @@
+.mainPage{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+}
+.leftBox{
+    width: 60%;
+    height: 500px;
+    overflow-y: scroll;
+    border: 1px solid black;
+    margin-left: 4vw;
+}
+.rightBox{
+    width: 25%;
+    border: 1px solid black;
+    margin-left: 4vw;
+    display: flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3vw;
+}
+.wordButton{
+    width: 100px;
+    height: 40px;
+    margin-top: 3vh;
+    margin-right: 2vw;
+}

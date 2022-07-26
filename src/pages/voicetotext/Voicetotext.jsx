@@ -50,12 +50,12 @@ function VoiceToText() {
 
   const handleListing = () => {
     setIsListening(true);
-    // setTextSpeech({transcript});
+    setTextSpeech({transcript});
     microphoneRef.current.classList.add("listening");
     SpeechRecognition.startListening({
       continuous: true,
     });
-    // console.log({textSpeech});
+    console.log({textSpeech});
   };
   const stopHandle = () => {
     setIsListening(false);
