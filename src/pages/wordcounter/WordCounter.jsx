@@ -12,10 +12,13 @@ export default function WordCounter() {
         const arr = [];
         for (let i = 0; i < str.length; i++) {
             if (str[i] == '.' || str[i] == ',' || str[i] == ' ' || str[i] == '\n' || str[i] == '\t') {
+                if (str.substr(prev, i - prev).length !== 0)
                 arr.push(str.substr(prev, i - prev));
                 prev = i + 1;
             }
         }
+        if (str.substr(prev, str.length - prev).length !== 0)
+        arr.push(str.substr(prev, str.length - prev));
         return arr;
     }
 
@@ -25,7 +28,7 @@ export default function WordCounter() {
             let reader = new FileReader();
             reader.readAsText(file);
             reader.onload = (e) => {
-                let str = e.target.result;  
+                let str = e.target.result;
                 // let finalWords = str.split(" ");
                 setText(e.target.result);
                 setFinalWords(splitString(str));
@@ -42,7 +45,7 @@ export default function WordCounter() {
                 </div>
                 <div className='rightBox'>
                     <input type="file" name="wordFile" onChange={uploadFile} ></input>
-                  
+
                     <p className='count'>The Total Number Of Words Are : {finalWords.length}</p>
                 </div>
             </div>

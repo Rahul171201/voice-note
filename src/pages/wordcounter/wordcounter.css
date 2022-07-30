@@ -1,8 +1,10 @@
 .mainPage{
-    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     padding-top: 30px;
+    background-color: blue;
+  
 }
 .leftBox{
     width: 60%;
@@ -10,9 +12,12 @@
     overflow-y: scroll;
     border: 1px solid black;
     margin-left: 4vw;
+    background-color: white;
+    overflow-x: hidden;
 }
 .rightBox{
     width: 25%;
+    height: 500px;
     border: 1px solid black;
     margin-left: 4vw;
     display: flex;
@@ -20,6 +25,7 @@
     justify-content: center;
     align-items: center;
     padding-left: 3vw;
+    background-color: white;
 }
 
 .count{

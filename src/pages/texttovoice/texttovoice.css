@@ -1,0 +1,38 @@
+.speech{
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.heading{
+    color: white;
+}
+.textArea{
+    width: 500px;
+    resize: none;
+}
+.group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.speechButton{
+    width: 90px;
+    height: 35px;
+    border: none;
+    border-radius: 2px;
+    margin-right: 10px;
+    background-color: #3EC70B;
+    color: white;
+}
+.cancelButton{
+    width: 90px;
+    height: 35px;
+    border: none;
+    border-radius: 2px;
+    margin-left: 10px;
+    background-color: #EB1D36;
+    color: white;
+}
