@@ -1,0 +1,28 @@
+.gameBox{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.matrix{
+    width: 530px;
+    height: 500px;
+    padding-bottom: 2px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.row{
+    padding: 0px;
+    margin: 0px;
+    width: 530px;
+    height: 100px;
+    display: flex;
+}
+.column{
+    width: 103.6px;
+    border: 1px solid black;
+    margin-left: 2px;
+    margin-top: 2px;
+}
