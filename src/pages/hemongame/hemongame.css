@@ -1,13 +1,14 @@
 .gameBox{
     height: 85vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .matrix{
-    width: 530px;
-    height: 500px;
+    width: 430px;
+    height: 300px;
     padding-bottom: 2px;
     display: flex;
     flex-direction: column;
@@ -16,13 +17,31 @@
 .row{
     padding: 0px;
     margin: 0px;
-    width: 530px;
-    height: 100px;
+    width: 430px;
+    height: 60px;
     display: flex;
 }
 .column{
-    width: 103.6px;
+    width: 83.5px;
     border: 1px solid black;
     margin-left: 2px;
     margin-top: 2px;
+}
+
+.headerBox{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+   margin-bottom: 20px;
+}
+
+.heading{
+    font-size: 30px;
+    color: white;
+    margin-left: 160px ;
+    margin-right: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

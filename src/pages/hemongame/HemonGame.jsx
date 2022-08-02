@@ -20,7 +20,7 @@ export default function HemonGame() {
         currentDiv.style.justifyContent = "center";
         currentDiv.style.alignItems = "center";
         currentDiv.append(child);
-        position.current = [row,column];
+        position.current = [row, column];
     }
 
     const removeRobot = (row, column) => {
@@ -32,11 +32,20 @@ export default function HemonGame() {
         currentDiv.innerHTML = '';
     }
 
+    const checkDiv = () => {
+        const currentDiv = document.getElementById("1_1");
+        return (currentDiv.innerHTML !== '');
+    }
+
     useEffect(() => {
         createRobot(position.current[0], position.current[1]);
     }, []);
 
+
     window.addEventListener("keydown", (e) => {
+        if (checkDiv()) {
+            position.current = [1, 1];
+        }
         if (e.key === "ArrowUp") {
             createRobot(position.current[0] - 1, position.current[1]);
         }
@@ -53,11 +62,15 @@ export default function HemonGame() {
         e.stopImmediatePropagation();
     });
 
-
     return (
         <div className="mainbox">
             <Navbar></Navbar>
             <div className='gameBox'>
+                <div className='headerBox'>
+                    <div className='heading'><span>Level</span><span>0</span></div>
+                    <div className='heading'><span>Scored Points</span><span>0</span></div>
+                    <div className='heading'><span>Level Points</span><span>0</span></div>
+                </div>
                 <div className='matrix'>
                     <div id="row_1" className='row'>
                         <div id="1_1" className='column'></div>
