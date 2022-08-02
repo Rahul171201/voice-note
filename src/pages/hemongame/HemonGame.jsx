@@ -1,16 +1,15 @@
 import './hemongame.css';
 import Navbar from '../../components/Navbar/Navbar';
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export default function HemonGame() {
-    const [position, setPosition] = useState([1, 1]);
-    const [rahul, setRahul] = useState(1);
+    const position = useRef([1, 1]);
 
     const createRobot = (row, column) => {
         if (row < 1 || row > 5 || column < 1 || column > 5) {
             return;
         }
-        removeRobot(position[0], position[1]);
+        removeRobot(position.current[0], position.current[1]);
         const id = row.toString() + '_' + column.toString();
         const currentDiv = document.getElementById(id);
         const child = document.createElement("img");
@@ -21,9 +20,7 @@ export default function HemonGame() {
         currentDiv.style.justifyContent = "center";
         currentDiv.style.alignItems = "center";
         currentDiv.append(child);
-        setPosition([row,column]);
-        setRahul(5);
-        console.log("op", rahul);
+        position.current = [row,column];
     }
 
     const removeRobot = (row, column) => {
@@ -36,23 +33,22 @@ export default function HemonGame() {
     }
 
     useEffect(() => {
-        createRobot(position[0], position[1]);
+        createRobot(position.current[0], position.current[1]);
     }, []);
 
-    window.addEventListener("keydown", async(e) => {
+    window.addEventListener("keydown", (e) => {
         if (e.key === "ArrowUp") {
-           await createRobot(position[0] - 1, position[1]);
+            createRobot(position.current[0] - 1, position.current[1]);
         }
         else if (e.key === "ArrowDown") {
-            console.log(position);
-            await createRobot(position[0] + 1, position[1]);
+            createRobot(position.current[0] + 1, position.current[1]);
         }
         else if (e.key === "ArrowLeft") {
-            await createRobot(position[0], position[1] - 1);
+            createRobot(position.current[0], position.current[1] - 1);
 
         }
         else if (e.key === "ArrowRight") {
-            await createRobot(position[0], position[1] + 1);
+            createRobot(position.current[0], position.current[1] + 1);
         }
         e.stopImmediatePropagation();
     });
